@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  message:string;
+  number :number;
+
+  constructor() { 
+  let date = new Date();
+  setInterval(()=>{
+  this.message =date.getDate().toLocaleString() +" " +date.toLocaleTimeString().toString();},
+  1000);
+
+  
+  
+  }
 
   ngOnInit() {
   }
