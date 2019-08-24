@@ -1,0 +1,7 @@
+.card{
+    display: flex;
+    orientation: inherit;
+    justify-content: center;
+    width: 25%;
+    margin: 15px;
+}

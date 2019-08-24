@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginServiceService } from '../login-service.service';
 
 @Component({
   selector: 'login',
@@ -10,17 +11,25 @@ export class LoginComponent implements OnInit {
   message:string;
   number :number;
 
-  constructor() { 
-  let date = new Date();
-  setInterval(()=>{
-  this.message =date.getDate().toLocaleString() +" " +date.toLocaleTimeString().toString();},
-  1000);
+  months = ["January", "Feburary", "March", "April",
+  "May", "June", "July", "August", "September",
+  "October", "November", "December"];
 
-  
-  
+  constructor(private loginService:LoginServiceService) { 
+ 
+  setInterval(()=>{
+  let date = new Date();
+  this.message =date.toDateString() +" " +date.toLocaleTimeString().toString();},
+  1000);
+ 
   }
 
   ngOnInit() {
+  
+  }
+
+  login(){
+    this.loginService.helloConsole();
   }
 
 }

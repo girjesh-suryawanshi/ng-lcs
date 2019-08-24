@@ -1,10 +1,9 @@
-<p>login works!</p>
-<div>
-    <button type="button" class="btn btn-primary">Primary</button>
-    
-    
-
+<div class="card">
+    <label>userName</label>
+    <input type="text" name="userName" [(ngModel)]="userName">{{userName}}
+    <label>Password</label>
+    <input type="password" name="password" [(ngModel)]="password">
+    <button type="button"class="btn btn-primary" (click)="login()">Login</button>
 </div>
-{{message}}
 
-{{number+number}}
+<p ngFor="let months of month">{{months}}</p>
