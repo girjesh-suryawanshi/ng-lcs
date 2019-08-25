@@ -1,7 +1,10 @@
-<p>login works!</p>
-<div>
-    <button type="button" class="btn btn-primary">Primary</button>
-    
-    
+<div class="card">
+<label>user name</label>
+<input type="text" name="userName" [(ngModel)]="userName" >
+<label>user password</label>
+<input type="password" name="userPassword">
+<button type="button" class="btn btn-primary" (click)="binding()" >Login</button>
 
 </div>
+
+{{userName}}
