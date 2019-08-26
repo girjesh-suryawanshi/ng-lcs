@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
 
   message:string;
   number :number;
+  users:any;
 
   months = ["January", "Feburary", "March", "April",
   "May", "June", "July", "August", "September",
@@ -25,11 +26,30 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-  
+   this.getAll();
+   this.users={};
   }
 
-  login(){
-    this.loginService.helloConsole();
+  getAll(){
+   console.log("Getting user");
+   this.loginService.getAllUsers().subscribe(success=>{
+    console.log("inside success");
+    console.log(success);
+    if(success.status == 200){
+      
+    }
+
+   },error=>{
+    console.log("inside error");
+   })
+   
   }
+   
+  onClickLogin(){
+
+    this.loginService.loginAuthentication(this.users).subscribe(success=>{},error=>{})
+
+  }
+
 
 }

@@ -1,9 +1,9 @@
 <div class="card">
     <label>userName</label>
-    <input type="text" name="userName" [(ngModel)]="userName">{{userName}}
+    <input type="text" name="userName" [(ngModel)]="users.userId">{{userName}}
     <label>Password</label>
-    <input type="password" name="password" [(ngModel)]="password">
-    <button type="button"class="btn btn-primary" (click)="login()">Login</button>
+    <input type="password" name="password" [(ngModel)]="users.password">
+    <button type="button"class="btn btn-primary" (click)="onClickLogin()">Login</button>
 </div>
 
 <p ngFor="let months of month">{{months}}</p>
