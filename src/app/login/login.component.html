@@ -1,10 +1,9 @@
 <div class="card">
-<label>user name</label>
-<input type="text" name="userName" [(ngModel)]="userName" >
-<label>user password</label>
-<input type="password" name="userPassword">
-<button type="button" class="btn btn-primary" (click)="binding()" >Login</button>
-
+    <label>userName</label>
+    <input type="text" name="userName" [(ngModel)]="users.userId">{{userName}}
+    <label>Password</label>
+    <input type="password" name="password" [(ngModel)]="users.password">
+    <button type="button"class="btn btn-primary" (click)="onClickLogin()">Login</button>
 </div>
 
-{{userName}}
+<p ngFor="let months of month">{{months}}</p>
